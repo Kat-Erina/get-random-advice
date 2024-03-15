@@ -7,14 +7,14 @@ const Advice = ({ randomAdvice, getAdvice }) => {
 
   return (
     <section className="flex flex-col px-6 ">
-      <section className="bg-Dark-Grayish-Blue h-[315px] flex flex-col w-full">
-        <h3 className="mt-10 text-center font-bold text-xs text-neon-green mb-6 tracking-wide ">
+      <section className="bg-Dark-Grayish-Blue h-[315px] whitespace-normal overflow-auto  flex flex-col w-full md:w-[540px]">
+        <h3 className="mt-10 text-center font-bold text-xs text-neon-green mb-6 tracking-wide md:text-[13px]">
           Advice #{id}
         </h3>
-        <p className=" text-text text-center text-xl h-[132px]  px-6">
+        <p className=" text-text text-center text-xl overflow-auto h-short px-6 md:text-2xl">
           “{advice}“
         </p>
-        <img className="mt-8  px-6" src={logo}></img>
+        <img className="mt-6  px-6" src={logo}></img>
       </section>
       <div className="w-full mt-[-28px] flex justify-center h-16 ">
         <img
@@ -27,9 +27,9 @@ const Advice = ({ randomAdvice, getAdvice }) => {
   );
 };
 
-export default Advice;
-
 Advice.propTypes = {
   randomAdvice: PropTypes.object,
   getAdvice: PropTypes.func,
 };
+
+export default Advice;
