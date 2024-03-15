@@ -6,20 +6,20 @@ const Advice = ({ randomAdvice, getAdvice }) => {
   let { id, advice } = randomAdvice;
 
   return (
-    <section className="flex flex-col">
-      <section className="bg-Dark-Grayish-Blue mx-[16px] w-[343px] h-[315px] flex flex-col">
-        <h3 className="mt-[40px] text-center font-bold text-xs text-neon-green mb-6 tracking-wide">
+    <section className="flex flex-col px-6 ">
+      <section className="bg-Dark-Grayish-Blue h-[315px] flex flex-col w-full">
+        <h3 className="mt-10 text-center font-bold text-xs text-neon-green mb-6 tracking-wide ">
           Advice #{id}
         </h3>
-        <p className="mx-6 text-text text-center text-xl h-[132px]">
+        <p className=" text-text text-center text-xl h-[132px]  px-6">
           “{advice}“
         </p>
-        <img className="mt-8" src={logo}></img>
+        <img className="mt-8  px-6" src={logo}></img>
       </section>
-      <div className="w-full mt-[-28px] flex justify-center h-[64px]">
+      <div className="w-full mt-[-28px] flex justify-center h-16 ">
         <img
           src={dice}
-          className="h-[60px] w-[60px]  rounded-full p-[12px] bg-neon-green"
+          className="h-14 w-14  rounded-full p-3 bg-neon-green hover:shadow-greenish"
           onClick={getAdvice}
         ></img>
       </div>
